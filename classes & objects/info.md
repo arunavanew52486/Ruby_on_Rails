@@ -1,4 +1,4 @@
-# Ruby: 2
+# Ruby: Classes & Objects
 Ruby is a perfect Object Oriented Programming Language, which include,
 - Data Encapsulation
 - Data Abstraction

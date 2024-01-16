@@ -1,4 +1,4 @@
-# Ruby
+# Ruby: Introduction
 
 ## Check Ruby version
 `ruby -v' of 'ruby --version`
