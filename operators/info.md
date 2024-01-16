@@ -17,7 +17,7 @@ Unary operators expect a single operand to run on.
 | ! | Boolean NOT |
 | ~ | Bitwise Complement |
 | + | Unary Plus |
-**Example**
+
 ```ruby
 puts(~5)    #-6
 puts(~-5)   #4
@@ -77,6 +77,12 @@ puts((5<2) && (20<12))  #false
 puts((5>2) || (20>12))  #true
 puts((5>2) || (20<12))  #true
 puts((5<2) || (20<12))  #false
+
+puts(5 && 1)    #1
+puts(5 && -3)   #-3
+puts(5 && 0)    #0
+puts(5 && "hello")  #'hello'
+puts(5 && "")   #""
 ```
 
 ## Ternary Operator
@@ -128,15 +134,26 @@ puts (x)    #32
 | >= | Greater Than Equal |
 | <= | Less Than Equal |
 | <=> | Combined Comparison |
+| === | Test equality within a when clause |
 | .eql? | Equality & Type |
 | equal? | Check Object ID |
+    NOTE: <=> Returns 0 if first operand equals second, 1 if first operand is greater than the second and -1 if first operand is less than the second.
+    NOTE: .eql? Returns True if the receiver and argument have both the same type and equal values.
+    NOTE: equal? True if the receiver and argument have the same object id.
 ```ruby
-puts(2 == 5)    # false
-puts(2 != 5)    # true
-puts(2 > 5)     # false
-puts(2 < 5)     # true
-puts(2 >= 2)    # true
-puts(2 <= 3)    # true
+puts(2 == 5)        #false
+puts(2 == 2.0)      #true
+puts(2 == "2")      #false
+puts (2.eql?(2.0))  #false
+
+puts(2 != 5)    #true
+puts(2 > 5)     #false
+puts(2 < 5)     #true
+puts(2 >= 2)    #true
+puts(2 <= 3)    #true
+puts(2 <=> 3)   #-1
+
+puts((1..10) === 5) #true
 ```
 
 ## Range Operator
@@ -145,4 +162,64 @@ puts(2 <= 3)    # true
 | .. | Range is inclusive of the last item |
 | ... | Range is exclusive of the last item |
 
+## defined? Operators
+    defined? is a special operator that takes the form of a method call to determine whether or not the passed expression is defined. It returns a description string of the expression, or nil if the expression isn't defined.
 
+    There are various usage of defined? Operator
+
+**Usage 1**
+```ruby
+defined? variable # True if variable is initialized
+```
+**For Example**
+```ruby
+foo = 42
+defined? foo    # => "local-variable"
+defined? $_     # => "global-variable"
+defined? bar    # => nil (undefined)
+```
+**Usage 2**
+```ruby
+defined? method_call # True if a method is defined
+```
+**For Example**
+```ruby
+defined? puts        # => "method"
+defined? puts(bar)   # => nil (bar is not defined here)
+defined? unpack      # => nil (not defined here)
+```
+**Usage 3**
+```ruby
+# True if a method exists that can be called with super user
+defined? super
+```
+**For Example**
+```ruby
+defined? super     # => "super" (if it can be called)
+defined? super     # => nil (if it cannot be)
+```
+**Usage 4**
+```ruby
+defined? yield   # True if a code block has been passed
+```
+**For Example**
+```ruby
+defined? yield    # => "yield" (if there is a block passed)
+defined? yield    # => nil (if there is no block)
+```
+
+## Dot "." and Double Colon "::" Operators
+    You call a module method by preceding its name with the module's name and a period, and you reference a constant using the module name and two colons.
+
+    The :: is a unary operator that allows: constants, instance methods and class methods defined within a class or module, to be accessed from anywhere outside the class or module.
+**Remember in Ruby, classes and methods may be considered constants too.**
+```ruby
+MR_COUNT = 0         # constant defined on main Object class
+module Foo
+   MR_COUNT = 0
+   ::MR_COUNT = 1    # set global count to 1
+   MR_COUNT = 2      # set local count to 2
+end
+puts MR_COUNT        # this is the global constant
+puts Foo::MR_COUNT   # this is the local "Foo" constant
+```
