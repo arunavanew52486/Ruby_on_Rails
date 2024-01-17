@@ -4,14 +4,20 @@ Ruby is a perfect Object Oriented Programming Language, which include,
 - Data Abstraction
 - Polymorphism
 - Inheritance
+## Ruby Object
+**Object** is the **default root** of all Ruby objects. Ruby objects inherit from **BasicObject** (it is the **parent class of all classes** in Ruby) which allows creating alternate object hierarchies.
 
 ## Defining a Class in Ruby
+- Each Ruby class is an instance of class Class.
 - A class in Ruby always starts with the keyword **class** followed by the name of the class.
-- The name should always be in *initial capitals*.
-- You terminate a class by using the keyword end.
-***Example***
+- Conventionally, for class name we use CamelCase, and should start with capital letter.
+- Defining class is finished with end keyword.
+
+**Example:**
 ```ruby
 class Customer
+    ....
+    ....
 end
 ```
 
@@ -23,14 +29,35 @@ Ruby provides **four** types of variables −
 - **Global Variables** − Class variables are not available across classes. If you want to have a single variable, which is available across classes, you need to define a global variable. The global variables are always **preceded by the dollar sign ($)**.
 
 ## Creating Objects in Ruby using new Method
-    The method new is a unique type of method, which is predefined in the Ruby library.
-    The new method belongs to the class methods.
+Objects in Ruby are created by calling new method of the class. It is a unique type of method and predefined in the Ruby library.
+Ruby objects are instances of the class.
+
+**Example:**
+
+We have a class named Java. Now, let's create an object java and use it with following command,
+```ruby
+java = Java.new("John")  
+```
+The method new is a unique type of method, which is predefined in the Ruby library.
+
+The new method belongs to the class methods.
+
 ***Example***
 ```ruby
-cust1 = Customer. new
-cust2 = Customer. new
+class Sample
+    def hello
+        puts "Hello Ruby!"
+    end
+end
+
+# Now using above class to create objects
+object1 = Sample. new
+object2 = Sample.new
+object3 = Sample.new()
+object1.hello
+object2.hello()
+object3.hello
 ```
-Here, cust1 and cust2 are the names of two objects. You write the object name followed by the equal to sign (=) after which the class name will follow. Then, the dot operator and the keyword new will follow.
 
 ## Custom Method to Create Ruby Objects
 - You can pass parameters to method new and those parameters can be used to initialize class variables.
@@ -65,6 +92,7 @@ class Sample
    end
 end
 ```
+- Ruby methods are similar to the functions in other lnguages.
 - Each method in a class starts with the keyword **def** followed by the method name.
 - The method name always preferred in **lowercase** letters. You end a method in Ruby by using the keyword **end**.
 
@@ -92,7 +120,6 @@ end
 object = Sample. new
 object.hello
 ```
-
 
 
 

@@ -7,5 +7,9 @@ class Sample
 end
 
 # Now using above class to create objects
-object = Sample. new
-object.hello
+object1 = Sample. new
+object2 = Sample.new
+object3 = Sample.new()
+object1.hello
+object2.hello()
+object3.hello
