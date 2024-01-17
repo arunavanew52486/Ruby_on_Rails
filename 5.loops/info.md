@@ -68,9 +68,75 @@ begin
 end until i > 5
 ```
 
+## brake statement
+Terminates the most internal loop.
+```ruby
+for i in (1..5) do
+    if (i > 2)
+        break
+    end
+    puts i
+end
+```
+    Output: 1 2
 
+## next statement
+Jumps to the next iteration of the most internal loop.
+```ruby
+for i in (1..5) do
+    if (i < 2) then
+        next
+    end
+    puts i
+end
+```
+    Output: 2 3 4 5
 
+## redo statement
+Restarts this iteration of the most internal loop, **without checking loop condition**.
+```ruby
+for i in (1..5) do
+    if (i < 2) then
+        puts i
+        redo
+    end
+end
+```
+    Output: 1 1 1 1 1 .......... infinite loop
 
+## retry statement
+Ruby retry statement is used to repeat the whole loop iteration from the start.
+
+If retry appears in rescue clause of begin expression, restart from the beginning of the begin body.
+```
+begin
+   do_something # exception raised
+rescue
+   # handles error
+   retry  # restart from beginning
+end
+```
+If retry appears in the iterator, the block, or the body of the for expression, **restarts the invocation** of the **iterator call**. Arguments to the iterator is re-evaluated.
+```
+for i in 1..5
+   retry if some_condition # restart from i == 1
+end
+```
+```ruby
+for i in 0..5
+    retry if i > 2
+    puts "Value of local variable is #{i}"
+end
+```
+**Output:**
+```
+Value of local variable is 1
+Value of local variable is 2
+Value of local variable is 1
+Value of local variable is 2
+.............
+......infinite loop
+```
 
 
 

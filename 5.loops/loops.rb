@@ -52,12 +52,42 @@ until i == 10
 end
 
 puts "\n-------- until modifier ----------\n"
-
 i = 0
 begin
     puts "#{i}"
     i += 1
 end until i > 5
+
+puts "\n-------- break statement ----------\n"
+for i in (1..5) do
+    if (i > 2) then
+        break
+    end
+    puts i
+end
+
+puts "\n-------- next statement ----------\n"
+for i in (1..5) do
+    if (i < 2) then
+        next
+    end
+    puts i
+end
+
+puts "\n-------- redo statement ----------\n"
+# for i in (1..5) do
+#     if (i < 2) then
+#         puts i
+#         redo
+#     end
+# end
+# infinite loop
+
+puts "\n-------- retry statement ----------\n"
+for i in (0..5) do
+    retry if (i > 2)
+puts "Value of local variable is #{i}"
+end
 
 
 
