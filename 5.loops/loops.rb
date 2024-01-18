@@ -44,6 +44,12 @@ for i in x do
     puts("for = #{i}")  
 end
 
+puts "\n-------- each, with array ----------\n"
+x = ["Blue", "Red", "Green", "Yellow", "White"]  
+x.each do |user|
+    puts user
+end
+
 puts "\n-------- until loop ----------\n"
 i = 1
 until i == 10
@@ -57,6 +63,10 @@ begin
     puts "#{i}"
     i += 1
 end until i > 5
+
+# or
+
+# puth "hello" until false    # infinite loop
 
 puts "\n-------- break statement ----------\n"
 for i in (1..5) do

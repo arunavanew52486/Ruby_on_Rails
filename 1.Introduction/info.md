@@ -1,8 +1,20 @@
 # Ruby: Introduction
 
-## Check Ruby version
-`ruby -v' of 'ruby --version`
+## What is Ruby?
+**Ruby is a dynamic, open source, object oriented and reflective programming language. It is fully object oriented programming language.**
 
+Everything is an object in Ruby. Each and every code has their properties and actions. Here properties refer to variables and actions refer to methods.
+
+Ruby variables are loosely typed, which means any variable can hold any type of object. 
+
+Ruby is considered similar to Perl and Smalltalk programming languages.
+
+Ruby is designed and developed by **Yukihiro "Martz" Matsumoto** in mid 1990s in Japan.
+
+In 2005, they released their first Ruby framework "Ruby on Rails". The framework release was a big success and the Ruby community increased incredibly.
+
+## Check Ruby version
+`'ruby -v' or 'ruby --version'`
 
 ## How to run?
 - filename test.rb:

@@ -50,6 +50,13 @@ for i in x do
 end
 ```
 
+## each, for array
+```ruby
+x.each do |user|
+    puts user
+end
+```
+
 ## until loop
 ```ruby
 i = 1
@@ -66,6 +73,10 @@ begin
     puts "#{i}"
     i += 1
 end until i > 5
+
+# or
+
+puth "hello" until false    # infinite loop
 ```
 
 ## brake statement

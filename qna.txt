@@ -1,0 +1,16 @@
+puts vs print
+retru, redo, error hndl
+until vs unless
+
+### new features ###
+number.even?
+number.odd?
+Ex: 5.odd?
+
+### new features ###
+a.between?(b,c)
+or
+a.between?b,c
+
+
+

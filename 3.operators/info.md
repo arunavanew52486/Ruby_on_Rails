@@ -81,6 +81,7 @@ puts((5<2) || (20<12))  #false
 puts(5 && 1)    #1
 puts(5 && -3)   #-3
 puts(5 && 0)    #0
+puts(0 && 4)    #0, different than other languages
 puts(5 && "hello")  #'hello'
 puts(5 && "")   #""
 ```
