@@ -84,10 +84,10 @@ puts "\n-------- redo statement ----------\n"
 # infinite loop
 
 puts "\n-------- retry statement ----------\n"
-for i in (0..5) do
-    retry if (i > 2)
-puts "Value of local variable is #{i}"
-end
+# for i in (0..5) do
+#     retry if (i > 2)
+# puts "Value of local variable is #{i}"
+# end
 
 
 
