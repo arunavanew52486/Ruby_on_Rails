@@ -73,10 +73,45 @@ days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 puts "#{days.drop(5)}"  # "Sat", "Sun"
 puts "#{days.drop(2)}"  # ""Wed", Thu", "Fri", "Sat", "Sun"    
 
+puts "\n\n\n-------- Adding elements to Array --------\n"
+puts "\n-------- Push or << Method --------\n"
+days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]   
+puts "#{days.push("Today")}"
+puts "#{days << ("Tomorrow")}"
 
+puts "\n-------- Unshift --------\n"
+days = ["Fri", "Sat", "Sun"]
+days.unshift("Today")
+puts "#{days}"
 
+puts "\n-------- Insert --------\n"
+days = ["Fri", "Sat", "Sun"]
+days.insert(2, "Thursday")
+puts "#{days}"
 
+puts "\n\n\n-------- Adding elements to Array --------\n"
+puts "\n-------- Pop --------\n"
+days = ["Fri", "Sat", "Sun"]
+x = days.pop
+puts x
+puts "#{days}"
 
+puts "\n-------- Shift --------\n"
+days = ["Fri", "Sat", "Sun"]
+x = puts days.shift
+puts x
+puts "#{days}"
 
+puts "\n-------- Delete --------\n"
+days = ["Fri", "Sat", "Sun"]
+x = days.delete("Sat")
+puts x
+puts "#{days}"
 
+days.delete(0)  # index not working
+puts "#{days}"
+
+puts "\n-------- Uniq --------\n"
+days = ["Fri", "Sat", "Sun", "Sat"]
+puts days.uniq
 

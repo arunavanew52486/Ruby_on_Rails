@@ -118,21 +118,68 @@ puts "#{days.drop(2)}"  # ""Wed", Thu", "Fri", "Sat", "Sun"
 [Other methods](https://www.tutorialspoint.com/ruby/ruby_arrays.htm)
 
 ## Adding Items to Array
-
 Ruby array elements can be added in different ways.
 
-    push or <<
-    unshift
-    insert
+### push or <<
+Using push or <<, items can be added at the end of an array.
+```ruby
+days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]   
+puts "#{days.push("Today")}"
+puts "#{days << ("Tomorrow")}"
+```
 
+### unshift
+Using unshift, a new element can be added at the beginning of an array.
+```ruby
+days = ["Fri", "Sat", "Sun"]
+puts "#{days.unshift("Today")}"
+```
+
+### insert
+Using insert, a new element can be added at any position in an array.
+Syntax: ``arr.insert(index, element)``
+```ruby
+days = ["Fri", "Sat", "Sun"]
+days.insert(2, "Thursday")
+puts "#{days}"
+
+```
 
 ## Removing Items from Array
-
 Ruby array elements can be removed in different ways.
+### pop
+Using pop, items can be removed from the end of an array. It returns the removed item.
+```ruby
+days = ["Fri", "Sat", "Sun"]
+x = days.pop
+puts x
+puts "#{days}"
+```
 
-    pop
-    shift
-    delete
-    uniq
+### shift
+Using shift, items can be removed from the start of an array. It returns the removed item.
+```ruby
+days = ["Fri", "Sat", "Sun"]
+x = puts days.shift
+puts x
+puts "#{days}"
+```
 
+### delete
+Using delete, items can be removed from anywhere in an array. It returns the removed item.
+```ruby
+days = ["Fri", "Sat", "Sun"]
+x = days.delete("Sat")
+puts x
+puts "#{days}"
 
+days.delete(0)  # index not working
+puts "#{days}"
+```
+
+### uniq
+Using uniq, duplicate elements can be removed from an array. It returns the remaining array.
+```ruby
+days = ["Fri", "Sat", "Sun", "Sat"]
+puts days.uniq
+```
