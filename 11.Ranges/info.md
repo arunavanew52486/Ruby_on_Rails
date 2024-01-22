@@ -87,3 +87,9 @@ Ruby reverse range operator does not return any value. If left side value is lar
 puts (5..1).to_a
 ```
 Nothing will be returned in the output for the above example.
+
+To print a reverse order, you can use reverse method in a normal range
+
+```ruby
+puts (1..5).to_a().reverse()
+```

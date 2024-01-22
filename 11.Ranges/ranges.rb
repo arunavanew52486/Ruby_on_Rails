@@ -57,4 +57,9 @@ if (('50'..'90') === 99)
 end
 
 puts "\n--------- Range as Intervals ----------\n"
-puts (5..1).to_a
+puts (5..1).to_a    # no output
+puts (1..5).to_a().reverse()    # print in reverse order
+
+
+
+
