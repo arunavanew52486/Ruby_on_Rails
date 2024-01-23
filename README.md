@@ -1,5 +1,5 @@
-# Ruby_on_Rails
-This repo is for learning purpose of ROR
+# Ruby_on_Rails: Rails Tutorial
+This repo is for learning purpose of Ruby
 
 ### Online materials
 - [Ruby Docs](https://www.ruby-lang.org/en/documentation/quickstart/)
