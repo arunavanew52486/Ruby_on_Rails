@@ -155,13 +155,103 @@ end
 # First it will create 'alreadyExist' dir, but if we run it again, it will throw an exception, and go to rescue block, then it will retry from begin block, and this time it will create the folder 'newDir'
 ```
 
-
-
 ## Using raise Statement
+The raise statement is used to raise an exception. 
+
+**Syntax:**
+```ruby
+raise
+```
+Or,
+```ruby
+raise "Error Message"
+```
+Or,
+```ruby
+raise ExceptionType, "Error Message"
+```
+Or,
+```ruby
+raise ExceptionType, "Error Message" condition
+```
+The **first** one re**-raises the current exception**. It is used for exception handlers where exception is intercepted before passing it on.
+
+The **second** one **creates a new RuntimeError exception**. This exception is then raised up the call stack.
+
+The **third** one uses first argument to create an exception, then sets associated **message** to the second argument.
+
+The **fourth** one similar to third one. In this you can add any **conditional** statement to raise an exception.
 
 ## Using ensure Statement
+There is an **ensure clause** which **guarantees some processing at the end of code**.
+
+The ensure block **always run** whether an **exception is raised or not**.
+
+It is placed after last rescue clause and will always executed as
+
+The ensure block will **run at any case** whether an exception arises, exception is rescued or code is terminated by uncaught exception. 
+
+**Syntax:**
+```
+begin
+    code..
+    #..raise exception
+    rescue
+    #.. exception is rescued
+    ensure
+    #.. This code will always execute.
+end
+```
+**Example**
+```ruby
+    begin
+        raise 'Just an Exception'
+    rescue Exception => e
+        puts e.message
+        puts e.backtrace.inspect
+    ensure
+        puts "The ensure code will always run"
+    end
+```
 
 ## Using else Statement
+The else clause is always present **after rescue clause and before ensure clause**.
+
+If **no exceptions** are raised, **then only** else block is executed.
+```
+    begin   
+        code..   
+        #..raise exception  
+    rescue   
+        # .. exception is rescued  
+    else  
+        #.. executes if there is no exception  
+    ensure   
+        #..  This code will always execute.  
+    end  
+```
 
 ## Ruby Catch and Throw
+Ruby catch and throw provide **a way to jump from the execution early** when no further work is needed in a code. 
 
+The **catch defines a block** that is **labeled** with a given name. It is used to **jump out of nested code**.
+
+Using catch, the block will be executed normally until throw is encountered.
+
+The catch and throw method is **faster** than rescue and raise clauses. Hence, it is **more suitable** to use. 
+
+```
+throw :lablename  
+#.. this  code will not be executed  
+catch :lablename do  
+#.. matching catch will be executed after a throw is encountered.  
+end  
+```
+Or
+```
+throw :lablename condition  
+#.. this code will not be executed  
+catch :lablename do  
+#.. matching catch will be executed after a throw is encountered.  
+end 
+```

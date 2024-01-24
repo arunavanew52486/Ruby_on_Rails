@@ -77,5 +77,12 @@ end
 # block, then it will retry from begin block, and this time
 # it will create the folder 'newDir'
 
-
-
+puts "\n-------- Using ensure Statement --------\n"
+begin
+    raise 'Just an Exception'
+rescue Exception => e
+    puts e.message
+    puts e.backtrace.inspect
+ensure
+    puts "The ensure code will always run"
+end
