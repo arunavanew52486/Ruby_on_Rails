@@ -14,7 +14,7 @@ puts "\nMethod 1: Using loop:-"
 puts "Factorial of #{inp}: #{res}"
 
 
-#! Method 1: Using Recursion
+#! Method 2: Using Recursion
 def fact(n)
     if (n == 1) then
         return 1
@@ -23,5 +23,5 @@ def fact(n)
 end
 
 res = fact(inp)
-puts "\nMethod 1: Using Recursion:-"
+puts "\nMethod 2: Using Recursion:-"
 puts "Factorial of #{inp}: #{res}"

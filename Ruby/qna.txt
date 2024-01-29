@@ -35,9 +35,6 @@ input = {
 sorting
 
 [17:32] Tanisha Dilawari
-palindorme
-
-[17:32] Tanisha Dilawari
 fibonicci series
 
 [17:33] Tanisha Dilawari
