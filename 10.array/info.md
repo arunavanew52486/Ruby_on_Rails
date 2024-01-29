@@ -183,3 +183,12 @@ Using uniq, duplicate elements can be removed from an array. It returns the rema
 days = ["Fri", "Sat", "Sun", "Sat"]
 puts days.uniq
 ```
+
+### Ruby .collect Method
+In Ruby, the .**collect** array method takes a block and applies the expression in the block to every element of an array.
+```ruby
+first_arr = [3, 4, 5]
+second_arr = first_arr.collect { |num| num * 5 }
+
+puts second_arr # [15, 20, 25]
+```

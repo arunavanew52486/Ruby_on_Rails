@@ -16,3 +16,39 @@ a.between?b,c
 
 procs
 
+links
+https://medium.com/@athiraramanan29/difference-between-each-map-collect-select-inject-reduce-and-detect-in-ruby-6089f9202283
+
+https://www.geeksforgeeks.org/ruby-types-of-iterators/
+
+https://www.freecodecamp.org/news/common-array-methods-in-ruby/
+
+ques-
+[17:30] Tanisha Dilawari
+input = { "a":{ "b":{ "c": [] }, "d": {} }, "e": "e", "f": nil, "g": -2 }
+[17:30] Tanisha Dilawari
+data = [
+  [2020, 50],
+  [2018, 90],
+  [2020, 40],
+  [2021, 100],
+  [2020, 10],
+  [2019, 70]
+]
+[17:31] Tanisha Dilawari
+remove duplicate
+[17:32] Tanisha Dilawari
+reverse
+[17:32] Tanisha Dilawari
+sorting
+[17:32] Tanisha Dilawari
+factorial
+[17:32] Tanisha Dilawari
+palindorme
+[17:32] Tanisha Dilawari
+fibonicci series
+[17:33] Tanisha Dilawari
+longest_palindrome
+[17:33] Tanisha Dilawari
+string = "AARACECARB"
+ 
