@@ -30,21 +30,9 @@ input = {
   "a": { "b":{ "c": [] },
   "d": {} }, "e": "e", "f": nil, "g": -2 }
 
-[17:30] Tanisha Dilawari
-data = [
-  [2020, 50],
-  [2018, 90],
-  [2020, 40],
-  [2021, 100],
-  [2020, 10],
-  [2019, 70]
-]
 
 [17:32] Tanisha Dilawari
 sorting
-
-[17:32] Tanisha Dilawari
-factorial
 
 [17:32] Tanisha Dilawari
 palindorme
