@@ -85,6 +85,7 @@ end
 ### Public Instance Methods
 | Method | Description |
 | ------------ | ------------ |
+| hsh.keys() | get array of keys |
 | hsh==other_hash | Two hashes are equal if they contain same key and value pair. |
 | hsh[key] | Retrieve value from the respective key. |
 | hsh[key] = value | Associates new value to the given key. |

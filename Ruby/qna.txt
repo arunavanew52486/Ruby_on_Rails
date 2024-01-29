@@ -25,7 +25,9 @@ https://www.freecodecamp.org/news/common-array-methods-in-ruby/
 
 ques-
 [17:30] Tanisha Dilawari
-input = { "a":{ "b":{ "c": [] }, "d": {} }, "e": "e", "f": nil, "g": -2 }
+input = {
+  "a": { "b":{ "c": [] },
+  "d": {} }, "e": "e", "f": nil, "g": -2 }
 [17:30] Tanisha Dilawari
 data = [
   [2020, 50],
@@ -36,8 +38,6 @@ data = [
   [2019, 70]
 ]
 [17:31] Tanisha Dilawari
-remove duplicate
-[17:32] Tanisha Dilawari
 reverse
 [17:32] Tanisha Dilawari
 sorting
