@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 #! Remove Duplicates from a given array
 
 a = [4, 5, 12, 77, 77, 2, 3, 23, 5, 6, 4, 4, 0, 15, 2]
@@ -15,14 +17,14 @@ require 'set'
 
 set = a.to_set()
 result = set.to_a()
-puts "\nMethod 2.a: Using Set Class"
+puts "\nMethod 2.a: Using Set Class:-"
 puts "#{result}"
 
 
 #! Method 2.b: Using Set Class
 set = Set.new
 
-puts "\nMethod 2.b: Using Set Class"
+puts "\nMethod 2.b: Using Set Class:-"
 a.each do |x|
     # set.add(x)
     # or
@@ -50,7 +52,7 @@ a.each do |x|
     # end
 end
 
-puts "\nMethod 3: Using Hash"
+puts "\nMethod 3: Using Hash:-"
 result = hash.keys()
 puts "#{result}"
 
@@ -75,5 +77,5 @@ for i in 0..max do
         result << i
     end
 end
-puts "\nMethod 4: Using Frequency array"
+puts "\nMethod 4: Using Frequency array:-"
 puts "#{result}"
