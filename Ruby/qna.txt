@@ -34,9 +34,6 @@ input = {
 [17:32] Tanisha Dilawari
 sorting
 
-[17:32] Tanisha Dilawari
-fibonicci series
-
 [17:33] Tanisha Dilawari
 longest_palindrome
 string = "AARACECARB"
