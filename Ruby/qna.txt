@@ -27,8 +27,3 @@ ques-
 
 [17:30] Tanisha Dilawari
 input = {"a": { "b":{ "c": [] },"d": {} }, "e": "e", "f": nil, "g": -2 }
-
-[17:33] Tanisha Dilawari
-longest_palindrome
-string = "AARACECARB"
- 
