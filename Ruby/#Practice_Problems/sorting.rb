@@ -88,7 +88,7 @@ puts "Sorted array (in place): #{a}"
 
 
 #! Method 6: Sort hash
-puts "\nSort hash:-"
+puts "\nMethod 6: Sort hash:-"
 hash = {"scaler" => 2, "academy" => 10, "aCademy" => 100, "interviewbit" => 21}
 puts "Input hash: #{hash}"
 
@@ -97,3 +97,30 @@ puts "Sorted by key: #{sorted_hash}"
 
 sorted_hash = hash.sort_by { |key, value| value }     # sort by value
 puts "Sorted by value: #{sorted_hash}"
+
+
+
+#! Method 7: Sort with multiple values
+puts "\nMethod 7: Sort hash with multiple values:-"
+data = [
+    { name: "Rohit", age: 32, "team": "MI"},
+    { name: "Virat", age: 32, "team": "RCB"},
+    { name: "Shubman", age: 23, "team": "GT"},
+    { name: "Ishan", age: 23, "team": "MI"},
+    { name: "Surya", age: 32, "team": "MI"},
+]
+puts "Input data:"
+puts data
+
+sorted_data = data.sort_by { |person| person[:team] }
+puts "\nSorted data by team:"
+puts sorted_data
+
+sorted_data = data.sort_by { |person| [person[:age]] }
+puts "\nSorted data by age:"
+puts sorted_data
+
+#* This sorts the array in ascending order depending on the first attribute, then the second attribute, and so on until there's no tie or all conditions has been checked.
+sorted_data = data.sort_by { |person| [person[:age], person[:team], person[:name]] }
+puts "\nSorted data*:"
+puts sorted_data
