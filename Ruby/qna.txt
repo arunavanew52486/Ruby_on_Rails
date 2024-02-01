@@ -12,7 +12,7 @@ a.between?(b,c)
 or
 a.between?b,c
 
-
+symbols vs string
 
 procs
 
@@ -27,3 +27,15 @@ ques-
 
 [17:30] Tanisha Dilawari
 input = {"a": { "b":{ "c": [] },"d": {} }, "e": "e", "f": nil, "g": -2 }
+
+
+
+
+Postgresql installation:
+sudo apt install postgresql postgresql-contrib libpq-dev -y
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+sudo -i -u postgres psql
+=# create role arunava with createdb login password 'arunava';
+=# \du
+To exit: ctrl+z
