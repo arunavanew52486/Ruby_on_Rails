@@ -12,5 +12,6 @@ This repo is for learning purpose of Ruby
 
 - [tutorials point](https://www.tutorialspoint.com/ruby-on-rails/index.htm)
 
-- [Rails Docs](https://api.rubyonrails.org/)
+- [Rails Guides](https://guides.rubyonrails.org/)
 
+- [Rails API](https://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html)
