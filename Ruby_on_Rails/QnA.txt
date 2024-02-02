@@ -1,0 +1,4 @@
+Is there any advantage of using erb link_to tags over normal html <a> tags?
+
+https://stackoverflow.com/questions/22257240/is-there-an-advantage-to-using-link-to-over-the-anchor-tag-in-rails
+https://stackoverflow.com/questions/11916762/rails-helpers-or-html-tags?rq=3
