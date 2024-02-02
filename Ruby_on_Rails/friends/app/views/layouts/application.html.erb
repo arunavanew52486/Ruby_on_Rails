@@ -20,6 +20,10 @@
     </header>
 
     <div class="container mt-5">
+      <% if notice %>
+      <br/>
+        <%= render 'layouts/alerts' %>
+      <% end %>
       <%= yield %>
     </div>
 
