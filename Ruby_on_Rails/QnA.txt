@@ -2,3 +2,11 @@ Is there any advantage of using erb link_to tags over normal html <a> tags?
 
 https://stackoverflow.com/questions/22257240/is-there-an-advantage-to-using-link-to-over-the-anchor-tag-in-rails
 https://stackoverflow.com/questions/11916762/rails-helpers-or-html-tags?rq=3
+
+
+token based auth, without devise
+
+First start with the basics of rails, study MVC and the folder structure
+Make a basic CRUD (understand the routing, database migration etc)
+Implement authentication using 'devise' gem (Source: https://rubygems.org/)
+Also implement token based authentication (without using 'devise')
