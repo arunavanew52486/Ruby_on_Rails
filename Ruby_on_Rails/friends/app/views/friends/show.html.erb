@@ -6,7 +6,9 @@
   <p>Twitter: <%= @friend.twitter %></p>
 
   <div class="d-flex ">
-    <%= link_to "Edit Details", edit_friend_path(@friend), class:"btn btn-dark mx-2" %>
-    <%= button_to "Delete this friend", @friend, method: :delete, class:"btn btn-danger mx-2" %>
+    <% if (@friend.user == current_user) %>
+      <%= link_to "Edit Details", edit_friend_path(@friend), class:"btn btn-dark mx-2" %>
+      <%= button_to "Delete this friend", @friend, method: :delete, class:"btn btn-danger mx-2" %>
+    <% end %>
   </div>
 </div>
