@@ -10,3 +10,7 @@ MVC divides your application into **three layers**: **Model**, **View**, and **C
 
 ![mvc diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/800px-MVC-Process.svg.png)
 
+[Basic overview of Web & Rails](https://www.theodinproject.com/lessons/ruby-on-rails-a-railsy-web-refresher)
+
+[MVC](https://betterexplained.com/articles/intermediate-rails-understanding-models-views-and-controllers/)
+

@@ -39,3 +39,6 @@ sudo -i -u postgres psql
 =# create role arunava with createdb login password 'arunava';
 =# \du
 To exit: ctrl+z
+
+HTTP?
+=> https://code.tutsplus.com/http-the-protocol-every-web-developer-must-know-part-1--net-31177t
