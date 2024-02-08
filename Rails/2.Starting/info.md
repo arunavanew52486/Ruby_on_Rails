@@ -55,3 +55,13 @@ Table Name: articles
 Model Name: article
 Article model file name: article.rb
 Article model class name: Article
+
+### Restart already running rails console
+```
+> reload!
+```
+
+### Check if any errors while saving
+```
+article.errors.full_messages
+```
