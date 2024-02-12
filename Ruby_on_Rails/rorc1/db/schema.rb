@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.1].define(version: 2024_02_12_071221) do
-=======
-ActiveRecord::Schema[7.1].define(version: 2024_02_12_062402) do
->>>>>>> main
+ActiveRecord::Schema[7.1].define(version: 2024_02_12_094954) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
@@ -25,10 +21,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_12_062402) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-<<<<<<< HEAD
     t.string "email"
-=======
->>>>>>> main
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
