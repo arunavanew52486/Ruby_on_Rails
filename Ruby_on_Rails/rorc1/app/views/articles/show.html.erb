@@ -1,11 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<div class="d-flex flex-column align-items-center">
 
-<%= render @article %>
+  <p style="color: green"><%= notice %></p>
 
-<div>
-  <%= link_to "Edit this article", edit_article_path(@article) %> |
-  <%= link_to "Back to articles", articles_path %>
-  <%#= link_to "Destroy this article", article_path(@article), method: :delete, data: { confirm: "Are you sure?"} %>
+  <%= render @article %>
 
-  <%= button_to "Destroy this article", @article, method: :delete %>
+  <div>
+    <%= link_to "Edit this article", edit_article_path(@article) %> |
+    <%= link_to "Back to articles", articles_path %>
+    <%#= link_to "Destroy this article", article_path(@article), method: :delete, data: { confirm: "Are you sure?"} %>
+
+    <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-dark mx-2 mt-3" %>
+  </div>
+
 </div>
+
+<%= render 'layouts/footer' %>
