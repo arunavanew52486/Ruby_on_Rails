@@ -2,7 +2,37 @@
   <p style="color: green"><%= notice %></p>
 
   <h1 class="text-center">List of all Articles</h1>
+  
+  <!-- digg pagination -->
+  <!--
+  <div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @articles %>
+    </div>
+    <%= will_paginate @articles, :container => false %>
+  </div>
+  -->
 
+  <!-- apple pagination -->
+  <!--
+  <div class="apple_pagination">
+    <div class="page_info">
+      <%= page_entries_info @articles %>
+    </div>
+    <%= will_paginate @articles, :container => false %>
+  </div>
+  -->
+
+  <!-- flickr pagination -->
+  <div class="flickr_pagination">
+    <!--
+    <div class="page_info">
+      <%= page_entries_info @articles %>
+    </div>
+    -->
+    <%= will_paginate @articles, :container => false %>
+  </div>
+  
   <%= render "articles/article" %>
 
   <%= link_to "Create New article", new_article_path, class: "btn btn-primary" %>

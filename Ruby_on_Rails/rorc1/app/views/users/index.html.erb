@@ -3,6 +3,16 @@
 
   <h1 class="fs-1 mt-3 text-center">All Users</h1>
 
+  <!-- flickr pagination -->
+  <div class="flickr_pagination">
+    <!--
+    <div class="page_info">
+      <%= page_entries_info @articles %>
+    </div>
+    -->
+    <%= will_paginate @users, :container => false %>
+  </div>
+
   <div id="users" class="text-center">
     <% @users.each do |user| %>
       <%= render user %>
