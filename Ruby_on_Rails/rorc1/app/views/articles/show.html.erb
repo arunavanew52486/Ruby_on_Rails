@@ -2,14 +2,34 @@
 
   <p style="color: green"><%= notice %></p>
 
-  <%= render @article %>
-
+  <%#= render @article %>
   <div>
-    <%= link_to "Edit this article", edit_article_path(@article) %> |
-    <%= link_to "Back to articles", articles_path %>
-    <%#= link_to "Destroy this article", article_path(@article), method: :delete, data: { confirm: "Are you sure?"} %>
+    <p>
+      <strong>Title: </strong>
+      <%= @article.title %>  
+    </p>
+    <p>
+      <strong>Description: </strong>
+      <%= @article.description %> 
+    </p>
+    <p>
+      <strong>Created at: </strong>
+      <%= time_ago_in_words(@article.created_at) %>
+       ago
+    </p>
+    <p>
+      <strong>Last updated: </strong>
+      <%= time_ago_in_words(@article.updated_at) %>
+       ago
+    </p>
+  </div>
 
-    <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-dark mx-2 mt-3" %>
+
+  <div class="d-flex justify-content-center gap-2 my-4">
+    <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %>
+    <%= link_to "<- Back to articles", articles_path, class:"btn btn-dark" %>
+    <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-danger" %>
+    <%#= link_to "Destroy this article", article_path(@article), method: :delete, data: { confirm: "Are you sure?"} %>
   </div>
 
 </div>

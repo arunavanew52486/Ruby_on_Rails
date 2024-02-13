@@ -1,17 +1,27 @@
-<div id="<%= dom_id article %>">
-  <p>
-    <strong>Author:</strong>
-    <%= article.user.username %>
-  </p>
-  
-  <p>
-    <strong>Title:</strong>
-    <%= article.title %>
-  </p>
+  <div id="articles">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Created at</th>
+          <th scope="col">Updated at</th>
+          <th scope="col">Visit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @articles.each do |article| %>
+        <tr id="<%= dom_id article %>">
+          <td><%= article.title%></td>
+          <td><%= truncate(article.description, length: 15)%></td>
+          <td><%= time_ago_in_words(article.created_at) %> ago</td>
+          <td><%= time_ago_in_words(article.updated_at) %> ago</td>
+          <td><%= link_to "Show", article_path(article) %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 
-  <p>
-    <strong>Description:</strong>
-    <%= simple_format(article.description) %>
-  </p>
 
-</div>
+
