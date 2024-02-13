@@ -1,12 +1,12 @@
-<div id="<%= dom_id user %>" class="border" >
-  <%= gravatar_for user, size: 200 %>
-  <p class="text-center mt-4 fs-3">
-    <strong>Username:</strong>
-    <%= user.username %>
+<div id="<%= dom_id user %>" class="border my-3" >
+  <p class="text-center mb-2 fs-3">
+    <%= link_to user.username, user %>
   </p>
-  <p class="text-center fs-6">
+  <%= gravatar_for user, size: 200 %>
+  <p class="text-center fs-6 my-2">
     <strong>Email:</strong>
     <%= user.email %>
   </p>
-
+  <p><%= pluralize(user.articles.count, "article") %></p>
+  <p>Joined <%= time_ago_in_words(user.created_at) %> ago</p>
 </div>
