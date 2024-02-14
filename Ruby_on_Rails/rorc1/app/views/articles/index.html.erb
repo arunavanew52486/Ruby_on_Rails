@@ -35,7 +35,10 @@
   
   <%= render "articles/article" %>
 
-  <%= link_to "Create New article", new_article_path, class: "btn btn-primary" %>
+  <% if logged_in? %>
+    <%= link_to "Create New article", new_article_path, class: "btn btn-primary" %>
+  <% end %>
+
 </div>
 
 <%= render 'layouts/footer' %>

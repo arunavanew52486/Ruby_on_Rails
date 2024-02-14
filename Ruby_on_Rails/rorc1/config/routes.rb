@@ -4,8 +4,12 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'about', to: 'pages#about'
+
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+
   # get 'signup', to: 'users#new'
-  
   #! 'route' controller#action - this format
   # root 'application#hello'
   #! rails expects a 'hello' action inside 'application' controller
