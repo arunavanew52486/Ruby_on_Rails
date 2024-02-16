@@ -1,0 +1,14 @@
+1. Add this line to gemfile:
+    gem 'devise', '~> 4.9', '>= 4.9.3'
+
+2. Terminal: bundle install
+
+3. Terminal: rails generate devise:install
+
+4. Follow instructions
+
+5. Terminal: rails generate devise MODEL_NAME
+
+6. Terminal: rails db:migrate
+
+7.
