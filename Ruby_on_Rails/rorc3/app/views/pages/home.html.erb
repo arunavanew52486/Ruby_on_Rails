@@ -1,1 +1,18 @@
-This is the home page
+<!--<h1 class="text-center text-5xl font-bold">Welcome</h1>-->
+
+<section class="col-span-12 bg-center bg-no-repeat bg-[url('1.jpg')] bg-gray-700 bg-blend-multiply">
+    <div class="px-8 mx-auto max-w-screen-xl text-center py-16 lg:py-24">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+            Welcome to out Blog App
+        </h1>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+            <%= $loremipsum %>
+        </p>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+            <%= link_to 'Get started', new_user_registration_path, class:"inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900" %>
+            <%= link_to 'About us', about_path, class:"inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400" %>
+        </div>
+    </div>
+</section>
+
+<%#= image_tag "1.jpg", alt:"image" %>

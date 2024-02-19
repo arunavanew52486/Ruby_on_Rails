@@ -1,9 +1,17 @@
-<h1>New post</h1>
+<section class="col-span-10 col-start-2 md:col-span-8 md:col-start-3 lg:col-span-4 lg:col-start-5 py-14 lg:py-24">
+  
+  <h1 class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-center md:text-5xl lg:text-6xl">
+    Add new post
+  </h1>
 
-<%= render "form", post: @post %>
+  <div class="bg-white border p-4 shadow-lg rounded-lg">
+    <%= render "form", post: @post %>
+  </div>
 
-<br>
+<!--
+  <div class="w-full">
+    <%= link_to "Back to posts", posts_path, class:"block w-full text-center text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" %>
+  </div>
+-->
 
-<div>
-  <%= link_to "Back to posts", posts_path %>
-</div>
+</section>
