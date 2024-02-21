@@ -10,10 +10,18 @@
             </a>
 
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <!-- login / logout / profile -->
                 <% if user_signed_in? %>
-                    <%#= button_to "Log out" destroy_user_session_path, method: :delete, class:"col-span-1 w-full focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" %>
-                    <%= link_to 'log out', destroy_user_session_path, data: { "turbo-method": :delete }, class:"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>            
-                    <div>Profile</div>
+                    <div class="flex gap-4 justify-center items-center">
+                        <%= link_to 'log out', destroy_user_session_path, data: { "turbo-method": :delete }, class:"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>            
+                        <a href="<%= profile_path %>">
+                            <div class="scale-150 hover:cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
                 <% else %>
                     <%= link_to 'login', new_user_session_path, class:"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>            
                 <% end %>
@@ -43,11 +51,3 @@
         </div>
     </nav>
 </header>
-
-<!--
-    <div>
-        <span><%#= link_to 'logout', destroy_user_session_path, method: :delete %></span>
-        <span><%= button_to "Logout", destroy_user_session_path, method: :delete %></span>
-        <span><%= link_to 'register', new_user_registration_path %></span>
-    </div>
--->

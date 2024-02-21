@@ -1,0 +1,41 @@
+<section class="col-span-10 col-start-2 sm:col-span-8 sm:col-start-3 md:col-span-6 md:col-start-4 mb-10 pt-14 lg:pt-24">
+
+    <h1 class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-center md:text-5xl lg:text-6xl">
+        Profile
+    </h1>
+
+    <div class="flex justify-center mb-5">
+        <div class="w-fit bg-white rounded-full shadow-lg">
+            <svg class="w-32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="flex justify-center mb-5">
+        <a href="<%= edit_user_registration_path %>" class="inline-flex justify-center gap-1 items-center py-2 px-4 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            Edit Profile
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+            </svg>
+        </a>
+    </div>
+
+    <div class="text-center">
+        <p>
+            <strong>Email: </strong>
+            <%= @user.email %>
+        </p>
+        <p>
+            <strong>Profile created: </strong>
+            <%= time_ago_in_words(@user.created_at) %>
+             ago
+        </p>
+        <p>
+            <strong>Profile edited: </strong>
+            <%= time_ago_in_words(@user.updated_at) %>
+             ago
+        </p>
+    </div>
+
+</section>

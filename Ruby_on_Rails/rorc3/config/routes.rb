@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'about'=>"pages#about"
+  get 'profile'=>"pages#profile"
 
   devise_for :users
   resources :posts
