@@ -1,10 +1,9 @@
-<h1>Editing post</h1>
+<section class="col-span-10 col-start-2 md:col-span-8 md:col-start-3 lg:col-span-4 lg:col-start-5 py-14 lg:py-24">
+  <h1 class="mb-8 text-4xl font-extrabold tracking-tight leading-none text-center md:text-5xl lg:text-6xl">
+    Edit post
+  </h1>
 
-<%= render "form", post: @post %>
-
-<br>
-
-<div>
-  <%= link_to "Show this post", @post %> |
-  <%= link_to "Back to posts", posts_path %>
-</div>
+  <div class="bg-white border p-4 shadow-lg rounded-lg">
+    <%= render "form", post: @post %>
+  </div>
+</section>
