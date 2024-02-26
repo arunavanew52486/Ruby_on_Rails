@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1>New category</h1>
+
+  <%= render 'shared/errors', obj: @category %>
+
+
+  <%= render "form", obj: @category %>
+
+  <div>
+    <%= link_to "Back to articles", articles_path %>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>

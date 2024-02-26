@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <p style="color: green"><%= notice %></p>
+  <p style="color: red"><%= alert %></p>
+
+  <h1 class="text-center">List of all Categories</h1>
+  
+    <% @categories.each do |category| %>
+    <div id="<%= dom_id category %>">
+        <%= link_to category.name, category_path(category) %>
+    </div>
+    <% end %>
+
+</div>
+
+<%= render 'layouts/footer' %>
